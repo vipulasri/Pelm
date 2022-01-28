@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 apply from: '../versions.gradle'
@@ -39,6 +41,9 @@ dependencies {
     implementation deps.androidx.constraintLayout
 
     implementation deps.material
+
+    implementation deps.hilt.sdk
+    kapt deps.hilt.compiler
     
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

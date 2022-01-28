@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 apply from: '../versions.gradle'
@@ -14,6 +15,7 @@ android {
         targetSdk versions.targetSdk
 
         consumerProguardFiles "consumer-rules.pro"
+        buildConfigField "String", "API_BASE_URL", "${API_BASE_URL}"
     }
 
     buildTypes {
@@ -43,4 +45,10 @@ dependencies {
 
     implementation deps.retrofit.sdk
     implementation deps.retrofit.moshiConverter
+
+    implementation deps.coroutines.sdk
+    implementation deps.coroutines.android
+
+    implementation deps.hilt.sdk
+    kapt deps.hilt.compiler
 }

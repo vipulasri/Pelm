@@ -6,6 +6,8 @@ versions.minSdk = 21
 versions.targetSdk = 31
 versions.moshi = "1.13.0"
 versions.retrofit = "2.9.0"
+versions.coroutines = "1.6.0"
+versions.hilt = "2.38.1"
 ext.versions = versions
 
 /* Dependencies */
@@ -35,5 +37,16 @@ def retrofit = [:]
 retrofit.sdk = "com.squareup.retrofit2:retrofit:${versions.retrofit}"
 retrofit.moshiConverter = "com.squareup.retrofit2:converter-moshi:${versions.retrofit}"
 deps.retrofit = retrofit
+
+def coroutines = [:]
+coroutines.sdk = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
+coroutines.android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"
+deps.coroutines = coroutines
+
+def hilt = [:]
+hilt.gradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:${versions.hilt}"
+hilt.sdk = "com.google.dagger:hilt-android:${versions.hilt}"
+hilt.compiler = "com.google.dagger:hilt-compiler:${versions.hilt}"
+deps.hilt = hilt
 
 ext.deps = deps
