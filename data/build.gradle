@@ -1,6 +1,7 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 apply from: '../versions.gradle'
@@ -9,13 +10,10 @@ android {
     compileSdk versions.compileSdk
 
     defaultConfig {
-        applicationId "com.vipulasri.pelm"
         minSdk versions.minSdk
         targetSdk versions.targetSdk
-        versionCode 1
-        versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -35,12 +33,14 @@ android {
 
 dependencies {
     implementation deps.androidx.coreKtx
-    implementation deps.androidx.appCompat
-    implementation deps.androidx.constraintLayout
 
-    implementation deps.material
-    
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation(platform(deps.okhttp.bom))
+    implementation deps.okhttp.sdk
+    implementation deps.okhttp.logging
+
+    implementation deps.moshi.sdk
+    kapt deps.moshi.codegen
+
+    implementation deps.retrofit.sdk
+    implementation deps.retrofit.moshiConverter
 }
