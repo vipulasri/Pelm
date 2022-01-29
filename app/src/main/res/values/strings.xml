@@ -3,4 +3,13 @@
     <string name="weather">Weather</string>
     <string name="photo_gallery">Photo Gallery</string>
     <string name="contact_us">Contact Us</string>
+
+    <string name="temperature_with_unit">%1$s°%2$s</string>
+    <string name="feels_like">Feels like:</string>
+    <string name="condition">Condition:</string>
+    <string name="updated_at">Updated at:</string>
+    <string name="error_no_cities">Some error occurred while fetching cities</string>
+    <string name="error_fetching_weather">Unable to fetch weather at the moment</string>
+    <string name="oops">Oops</string>
+    <string name="retry">Retry</string>
 </resources>
