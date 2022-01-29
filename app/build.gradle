@@ -36,11 +36,27 @@ android {
 }
 
 dependencies {
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
+
     implementation deps.androidx.coreKtx
     implementation deps.androidx.appCompat
     implementation deps.androidx.constraintLayout
 
     implementation deps.material
+
+    implementation(platform(deps.okhttp.bom))
+    implementation deps.okhttp.sdk
+    implementation deps.okhttp.logging
+
+    implementation deps.moshi.sdk
+    kapt deps.moshi.codegen
+
+    implementation deps.retrofit.sdk
+    implementation deps.retrofit.moshiConverter
+
+    implementation deps.coroutines.sdk
+    implementation deps.coroutines.android
 
     implementation deps.hilt.sdk
     kapt deps.hilt.compiler

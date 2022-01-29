@@ -1,4 +1,4 @@
-package com.vipulasri.pelm.data.remote
+package com.vipulasri.pelm.domain
 
 /**
  * Created by Vipul Asri on 29/01/22.

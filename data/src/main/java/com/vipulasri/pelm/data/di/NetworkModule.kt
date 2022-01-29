@@ -23,13 +23,13 @@ object NetworkModule {
 
     @Provides
     @Named("BASE_URL")
-    internal fun provideBaseUrl(): String {
+    fun provideBaseUrl(): String {
         return "https://www.theweathernetwork.com/api/"
     }
 
     @Provides
     @Singleton
-    internal fun httpLoggingInterceptor(): HttpLoggingInterceptor {
+    fun httpLoggingInterceptor(): HttpLoggingInterceptor {
         return HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
         }
@@ -37,7 +37,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    internal fun provideOkhttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
+    fun provideOkhttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(httpLoggingInterceptor)
             .build()
@@ -52,7 +52,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    internal fun provideRetrofit(
+    fun provideRetrofit(
         okHttpClient: OkHttpClient,
         moshi: Moshi,
         @Named("BASE_URL") baseUrl: String
