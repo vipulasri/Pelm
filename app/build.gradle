@@ -45,19 +45,6 @@ dependencies {
 
     implementation deps.material
 
-    implementation(platform(deps.okhttp.bom))
-    implementation deps.okhttp.sdk
-    implementation deps.okhttp.logging
-
-    implementation deps.moshi.sdk
-    kapt deps.moshi.codegen
-
-    implementation deps.retrofit.sdk
-    implementation deps.retrofit.moshiConverter
-
-    implementation deps.coroutines.sdk
-    implementation deps.coroutines.android
-
     implementation deps.hilt.sdk
     kapt deps.hilt.compiler
     

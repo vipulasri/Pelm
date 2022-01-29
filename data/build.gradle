@@ -38,18 +38,18 @@ dependencies {
 
     implementation deps.androidx.coreKtx
 
-    implementation(platform(deps.okhttp.bom))
-    implementation deps.okhttp.sdk
-    implementation deps.okhttp.logging
+    api(platform(deps.okhttp.bom))
+    api deps.okhttp.sdk
+    api deps.okhttp.logging
 
-    implementation deps.moshi.sdk
+    api deps.moshi.sdk
     kapt deps.moshi.codegen
 
-    implementation deps.retrofit.sdk
-    implementation deps.retrofit.moshiConverter
+    api deps.retrofit.sdk
+    api deps.retrofit.moshiConverter
 
-    implementation deps.coroutines.sdk
-    implementation deps.coroutines.android
+    api deps.coroutines.sdk
+    api deps.coroutines.android
 
     implementation deps.hilt.sdk
     kapt deps.hilt.compiler
