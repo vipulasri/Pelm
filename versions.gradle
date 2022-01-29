@@ -8,6 +8,7 @@ versions.moshi = "1.13.0"
 versions.retrofit = "2.9.0"
 versions.coroutines = "1.6.0"
 versions.hilt = "2.40.5"
+versions.navigation = "2.4.0"
 ext.versions = versions
 
 /* Dependencies */
@@ -18,6 +19,7 @@ def androidx = [:]
 androidx.coreKtx = "androidx.core:core-ktx:1.7.0"
 androidx.appCompat = "androidx.appcompat:appcompat:1.4.1"
 androidx.constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.3"
+androidx.fragment = "androidx.fragment:fragment-ktx:1.3.0"
 deps.androidx = androidx
 
 deps.material = "com.google.android.material:material:1.5.0"
@@ -48,5 +50,10 @@ hilt.gradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:${versions.hil
 hilt.sdk = "com.google.dagger:hilt-android:${versions.hilt}"
 hilt.compiler = "com.google.dagger:hilt-compiler:${versions.hilt}"
 deps.hilt = hilt
+
+def navigation = [:]
+navigation.fragment = "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
+navigation.ui = "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+deps.navigation = navigation
 
 ext.deps = deps

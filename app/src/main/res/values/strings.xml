@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Pelm</string>
+    <string name="weather">Weather</string>
+    <string name="photo_gallery">Photo Gallery</string>
+    <string name="contact_us">Contact Us</string>
 </resources>
