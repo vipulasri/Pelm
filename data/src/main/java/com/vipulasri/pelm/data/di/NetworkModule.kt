@@ -1,6 +1,7 @@
 package com.vipulasri.pelm.data.di
 
 import com.squareup.moshi.Moshi
+import com.vipulasri.pelm.data.BuildConfig
 import com.vipulasri.pelm.data.remote.WeatherApiService
 import dagger.Module
 import dagger.Provides
@@ -24,14 +25,18 @@ object NetworkModule {
     @Provides
     @Named("BASE_URL")
     fun provideBaseUrl(): String {
-        return "https://www.theweathernetwork.com/api/"
+        return BuildConfig.API_BASE_URL
     }
 
     @Provides
     @Singleton
     fun httpLoggingInterceptor(): HttpLoggingInterceptor {
         return HttpLoggingInterceptor().apply {
-            level = HttpLoggingInterceptor.Level.BODY
+            level = if (BuildConfig.DEBUG) {
+                HttpLoggingInterceptor.Level.BODY
+            } else {
+                HttpLoggingInterceptor.Level.NONE
+            }
         }
     }
 
