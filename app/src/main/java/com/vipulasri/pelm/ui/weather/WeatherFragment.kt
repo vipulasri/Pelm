@@ -11,6 +11,7 @@ import com.vipulasri.pelm.databinding.FragmentWeatherBinding
 import com.vipulasri.pelm.domain.model.WeatherDetails
 import com.vipulasri.pelm.extensions.showOrHide
 import com.vipulasri.pelm.ui.base.BaseFragment
+import com.vipulasri.pelm.ui.weather.cities.CitiesBottomSheet
 import com.vipulasri.pelm.utils.nonNull
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -29,7 +30,14 @@ class WeatherFragment : BaseFragment<FragmentWeatherBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupClickListeners()
         setupObservers()
+    }
+
+    private fun setupClickListeners() {
+        binding.textCity.setOnClickListener {
+            CitiesBottomSheet.show(childFragmentManager)
+        }
     }
 
     private fun setupObservers() {

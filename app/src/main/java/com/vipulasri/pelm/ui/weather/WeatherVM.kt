@@ -31,7 +31,7 @@ class WeatherVM @Inject constructor(
         loadCities()
     }
 
-    private fun getCities(): List<City> = cities
+    fun getCities(): List<City> = cities
 
     fun setSelectedCity(city: City?) {
         selectedCity.setValue(city)

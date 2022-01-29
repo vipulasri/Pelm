@@ -12,4 +12,5 @@
     <string name="error_fetching_weather">Unable to fetch weather at the moment</string>
     <string name="oops">Oops</string>
     <string name="retry">Retry</string>
+    <string name="choose_city">Choose city:</string>
 </resources>
