@@ -14,4 +14,5 @@
     <string name="retry">Retry</string>
     <string name="choose_city">Choose city:</string>
     <string name="error_fetching_photos">Unable to fetch photos</string>
+    <string name="error_loading_photo">Something went wrong, while loading the image</string>
 </resources>

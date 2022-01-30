@@ -45,6 +45,8 @@ dependencies {
     implementation project(path: ':domain')
     implementation project(path: ':data')
 
+    implementation deps.timber
+
     implementation deps.androidx.coreKtx
     implementation deps.androidx.appCompat
     implementation deps.androidx.constraintLayout
@@ -59,6 +61,9 @@ dependencies {
 
     implementation deps.glide.sdk
     kapt deps.glide.compiler
+
+    implementation deps.bigImageViewer.sdk
+    implementation deps.bigImageViewer.glide
     
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

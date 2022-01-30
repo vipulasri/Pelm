@@ -33,7 +33,7 @@ class GalleryFragment : BaseFragment<FragmentGalleryBinding>() {
 
         photoAdapter = PhotoAdapter(Glide.with(this)).apply {
             onPhotoClick = { photo ->
-
+                PhotoFullScreenActivity.launch(requireActivity(), photo.url)
             }
         }
 

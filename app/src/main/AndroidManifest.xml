@@ -21,6 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.gallery.PhotoFullScreenActivity"
+            android:theme="@style/Theme.Pelm.NoActionBar" />
+
     </application>
 
 </manifest>

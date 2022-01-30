@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.github.piasy.biv.view.BigImageView
+        android:id="@+id/big_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:failureImageInitScaleType="center"
+        app:optimizeDisplay="true" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding"
+        android:layout_marginTop="@dimen/padding"
+        android:padding="@dimen/padding"
+        android:tint="@color/white"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
