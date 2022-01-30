@@ -9,6 +9,7 @@ versions.retrofit = "2.9.0"
 versions.coroutines = "1.6.0"
 versions.hilt = "2.40.5"
 versions.navigation = "2.4.0"
+versions.glide = "4.12.0"
 ext.versions = versions
 
 /* Dependencies */
@@ -55,5 +56,10 @@ def navigation = [:]
 navigation.fragment = "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
 navigation.ui = "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
 deps.navigation = navigation
+
+def glide = [:]
+glide.sdk = "com.github.bumptech.glide:glide:${versions.glide}"
+glide.compiler = "com.github.bumptech.glide:compiler:${versions.glide}"
+deps.glide = glide
 
 ext.deps = deps
