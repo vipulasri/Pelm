@@ -40,9 +40,9 @@ class WeatherVM @Inject constructor(
         }
     }
 
-    fun loadWeatherDetails() {
-        selectedCity.value?.let { city ->
-            getWeatherDetails(city)
+    fun loadWeatherDetails(city: City?) {
+        city?.let { safeCity ->
+            getWeatherDetails(safeCity)
         }
     }
 

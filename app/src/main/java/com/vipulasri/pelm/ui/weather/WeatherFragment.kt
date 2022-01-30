@@ -77,7 +77,7 @@ class WeatherFragment : BaseFragment<FragmentWeatherBinding>() {
                         true,
                         getString(R.string.error_fetching_weather),
                         onRetry = {
-                            viewModel.loadWeatherDetails()
+                            viewModel.loadWeatherDetails(viewModel.selectedCity.value)
                         }
                     )
                 }
