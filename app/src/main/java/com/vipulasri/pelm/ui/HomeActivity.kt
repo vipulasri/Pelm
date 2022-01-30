@@ -1,6 +1,7 @@
 package com.vipulasri.pelm.ui
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -25,4 +26,6 @@ class HomeActivity : AppCompatActivity() {
             .findFragmentById(R.id.fragment_container) as NavHostFragment).navController
         binding.bottomNavigation.setupWithNavController(navController)
     }
+
+    open fun getSnackBarAnchorView() = binding.bottomNavigation
 }

@@ -15,4 +15,23 @@
     <string name="choose_city">Choose city:</string>
     <string name="error_fetching_photos">Unable to fetch photos</string>
     <string name="error_loading_photo">Something went wrong, while loading the image</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="submit">Submit</string>
+
+    <string name="error_message_unknown">Unknown error occurred</string>
+    <string name="error_message_empty_field">Field cannot be empty</string>
+
+    <string name="error_message_empty_name">Please enter name</string>
+    <string name="error_message_valid_name">Please enter valid name</string>
+    <string name="error_message_name_length">Name must have minimum of 4 characters</string>
+
+    <string name="error_message_empty_email">Please enter email</string>
+    <string name="error_message_valid_email">Please enter valid email</string>
+
+    <string name="error_message_empty_phone">Please enter phone</string>
+    <string name="error_message_phone_length">Phone must be minimum of length 5 and maximum of 15</string>
+    <string name="error_message_valid_phone">Please enter valid phone</string>
+    <string name="success_contact_form">Contact form submitted</string>
 </resources>
