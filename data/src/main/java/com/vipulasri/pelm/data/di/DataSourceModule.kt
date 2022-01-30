@@ -1,7 +1,7 @@
 package com.vipulasri.pelm.data.di
 
-import com.vipulasri.pelm.data.local.CityLocalDataSource
-import com.vipulasri.pelm.data.local.CityLocalDataSourceImpl
+import com.vipulasri.pelm.data.local.city.CityLocalDataSource
+import com.vipulasri.pelm.data.local.city.CityLocalDataSourceImpl
 import com.vipulasri.pelm.data.local.photo.PhotoLocalDataSource
 import com.vipulasri.pelm.data.local.photo.PhotoLocalDataSourceImpl
 import com.vipulasri.pelm.data.remote.WeatherApiService

@@ -1,6 +1,6 @@
 package com.vipulasri.pelm.data.repository
 
-import com.vipulasri.pelm.data.local.CityLocalDataSource
+import com.vipulasri.pelm.data.local.city.CityLocalDataSource
 import com.vipulasri.pelm.data.remote.datasource.WeatherRemoteDataSource
 import com.vipulasri.pelm.domain.SafeResult
 import com.vipulasri.pelm.domain.model.City

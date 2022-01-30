@@ -1,4 +1,4 @@
-package com.vipulasri.pelm.data.local
+package com.vipulasri.pelm.data.local.city
 
 import com.vipulasri.pelm.domain.model.City
 
