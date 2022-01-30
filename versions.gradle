@@ -45,6 +45,7 @@ deps.retrofit = retrofit
 def coroutines = [:]
 coroutines.sdk = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
 coroutines.android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"
+coroutines.test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.coroutines}"
 deps.coroutines = coroutines
 
 def hilt = [:]
@@ -69,5 +70,7 @@ bigImageViewer.glide = "com.github.piasy:GlideImageLoader:${versions.bigImageVie
 deps.bigImageViewer = bigImageViewer
 
 deps.timber = "com.jakewharton.timber:timber:5.0.1"
+deps.mockk = "io.mockk:mockk:1.12.2"
+deps.junit = "junit:junit:4.+"
 
 ext.deps = deps

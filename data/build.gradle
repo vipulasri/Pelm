@@ -53,4 +53,8 @@ dependencies {
 
     implementation deps.hilt.sdk
     kapt deps.hilt.compiler
+
+    testImplementation deps.mockk
+    testImplementation deps.coroutines.test
+    testImplementation deps.junit
 }
